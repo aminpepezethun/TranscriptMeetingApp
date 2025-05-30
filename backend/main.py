@@ -1,5 +1,5 @@
-from models.models import User, Transcript, Recording
-from routers.routers import router as user_router
-from schemas.schemas import UserSignup, UserLogin
-from utils.utils import hash_password, verify_password
+from fastapi import FastAPI
+from routers import auth
 
+app = FastAPI()
+app.include_router(auth.router)
