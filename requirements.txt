@@ -1,0 +1,14 @@
+# Tech stacks
+python==3.12.3
+
+
+
+
+# ---------
+# Backend
+# ---------
+# Security
+jwt
+
+# database
+mysql-server

@@ -1,0 +1,7 @@
+main.py: Entry point to initialise app and include routes
+models.py: sqlalchemy models for database structure
+routes.py: fastAPI endpoints
+schemas.py: pydantic models for request/response validation
+.env: secret and configurations
+venv: python venv
+requirements.txt: dependencies list
