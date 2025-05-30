@@ -1,15 +1,15 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
-from .database import Base
+from database import Base
 
 # User model
 class User(Base):
     __tablename__ = 'users'
 
     id = Column(Integer, primary_key=True, index=True)
-    username = Column(String(60), unique=True, nullable=False)
-    firstname = Column(String(60), nullable=False)
-    lastname = Column(String(60), nullable=False)
+    username = Column(String(60), unique=True, nullable=True)
+    firstname = Column(String(60), nullable=True)
+    lastname = Column(String(60), nullable=True)
     email = Column(String(120), unique=True, nullable=False)
     password = Column(String(120), nullable=False)
     profile_picture_path = Column(String, default='static/profile_picture/blank_profile_picture')
