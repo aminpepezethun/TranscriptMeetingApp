@@ -1,20 +1,21 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import CoverPage from './Pages/CoverPage';
-import AuthPage from './Pages/AuthPage';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Main from "./main/Main";
+import Auth from "./auth/Auth";
+import TranscriptMeeting from './meeting/TranscriptMeeting';
 
 function App() {
   return (
     // <div>
     //   <h1>If I see this, React is rendering</h1>
     // </div>
-    <Router>
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<CoverPage />} />
-        <Route path="/signup" element={<AuthPage />} />
-        <Route path="/login" element={<AuthPage />} />
+        <Route path="/" element={<Main />} />
+        <Route path="/authentication" element={<Auth />} />
+        <Route path="/transcript-meeting" element={<TranscriptMeeting />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
