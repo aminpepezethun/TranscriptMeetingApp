@@ -8,7 +8,7 @@ class UserBase(BaseModel):
     email: EmailStr
 
 # UserCreate: use during signup
-class UserCreate(UserBase):
+class UserSignup(UserBase):
     password: str
 
 # UserLogin: use during login
